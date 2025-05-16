@@ -1,0 +1,113 @@
+    :root {
+      --main-color: #006e51;
+      --light-bg: #f4f4f4;
+      --white: #fff;
+      --accent-bg: #e0f7ec;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      background-color: var(--light-bg);
+      color: #333;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 1rem;
+      background-color: var(--white);
+      min-height: 100vh;
+    }
+
+    header, nav, footer {
+      background-color: var(--main-color);
+      color: var(--white);
+      padding: 1rem;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav li {
+      margin-right: 1rem;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      text-decoration: underline;
+    }
+
+    .accordion button {
+      background-color: var(--accent-bg);
+      color: #000;
+      cursor: pointer;
+      padding: 1rem;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      transition: background-color 0.3s;
+    }
+
+    .accordion button:focus {
+      outline: 3px solid var(--main-color);
+    }
+
+    .accordion-content {
+      padding: 0 1rem;
+      display: none;
+      overflow: hidden;
+      background-color: #f9f9f9;
+    }
+
+    form {
+      margin-top: 2rem;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+    }
+
+    button[type="submit"] {
+      background-color: var(--main-color);
+      color: var(--white);
+      border: none;
+      padding: 0.7rem 1.5rem;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .tablist button {
+        flex: 1 0 100%;
+      }
+    }

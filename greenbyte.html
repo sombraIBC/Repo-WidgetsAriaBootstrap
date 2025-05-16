@@ -4,23 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Greenbyte - Solucions Sostenibles</title>
+  <link rel="stylesheet" href="greenbyte.css">
 </head>
 <body>
   <div class="container">
-    <header aria-label="Capçalera" role="banner">
+    <header>
       <h1>Greenbyte</h1>
       <p>Solucions Sostenibles per un Futur Verd</p>
     </header>
 
-    <nav aria-label="Navegació principal" role="navigation">
+    <nav role="navigation" aria-label="Navegació principal">
       <ul>
         <li><a href="#serveis">Serveis</a></li>
         <li><a href="#contacte">Contacte</a></li>
       </ul>
     </nav>
 
-    <main aria-label="Contingut principal" role="main">
-      <section id="serveis" aria-label="Serveis oferts">
+    <main>
+      <section aria-labelledby="titol-serveis" id="serveis">
         <h2 id="titol-serveis">Els nostres serveis</h2>
         <div class="accordion" role="region" aria-labelledby="titol-serveis">
           <button aria-expanded="false" aria-controls="contingut1" id="titol1">Consultoria ambiental</button>
@@ -37,7 +38,7 @@
 
       <section class="tabs" aria-label="Informació destacada">
         <h2>Informació destacada</h2>
-        <div class="tablist" role="tablist" aria-label="Pestanyes informatives">
+        <div role="tablist" class="tablist" aria-label="Pestanyes informatives">
           <button role="tab" aria-selected="true" aria-controls="tab1" id="tabBtn1">Missió</button>
           <button role="tab" aria-selected="false" aria-controls="tab2" id="tabBtn2">Visió</button>
           <button role="tab" aria-selected="false" aria-controls="tab3" id="tabBtn3">Valors</button>
@@ -63,7 +64,7 @@
         </p>
       </section>
 
-      <section id="contacte" aria-label="Secció de contacte">
+      <section id="contacte" aria-labelledby="titol-contacte">
         <h2 id="titol-contacte">Formulari de contacte</h2>
         <form aria-label="Formulari de contacte">
           <label for="nom">Nom:</label>
@@ -80,9 +81,22 @@
       </section>
     </main>
 
-    <footer aria-label="Peu de pàgina" role="contentinfo">
+    <footer role="contentinfo">
       <p>&copy; 2025 Greenbyte - Àlex Gertrudis, Juan Ramon Castro</p>
     </footer>
   </div>
+
+  <script>
+    // Acordió
+    const buttons = document.querySelectorAll('.accordion button');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        const content = document.getElementById(btn.getAttribute('aria-controls'));
+        content.style.display = expanded ? 'none' : 'block';
+      });
+    });
+  </script>
 </body>
 </html>
