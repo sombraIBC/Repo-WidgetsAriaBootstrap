@@ -1,5 +1,88 @@
 <!DOCTYPE html>
 <html lang="ca">
-	<head></head>
-	<body></body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Greenbyte - Solucions Sostenibles</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Greenbyte</h1>
+      <p>Solucions Sostenibles per un Futur Verd</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#serveis">Serveis</a></li>
+        <li><a href="#contacte">Contacte</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="serveis">
+        <h2 id="titol-serveis">Els nostres serveis</h2>
+        <div class="accordion">
+          <button aria-expanded="false" aria-controls="contingut1" id="titol1">Consultoria ambiental</button>
+          <div id="contingut1" class="accordion-content">
+            <p>Ajudem empreses a reduir la seva petjada ecològica.</p>
+          </div>
+
+          <button aria-expanded="false" aria-controls="contingut2" id="titol2">Educació i tallers</button>
+          <div id="contingut2" class="accordion-content">
+            <p>Oferim formacions sobre sostenibilitat per escoles i organitzacions.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="tabs">
+        <h2>Informació destacada</h2>
+        <div class="tablist">
+          <button aria-selected="true" aria-controls="tab1" id="tabBtn1">Missió</button>
+          <button aria-selected="false" aria-controls="tab2" id="tabBtn2">Visió</button>
+          <button aria-selected="false" aria-controls="tab3" id="tabBtn3">Valors</button>
+        </div>
+        <div id="tab1" class="tabpanel">
+          <p>Contribuir a un món més net i sostenible a través de la innovació ecològica.</p>
+        </div>
+        <div id="tab2" class="tabpanel">
+          <p>Ser líders en solucions ambientals accessibles per a tothom.</p>
+        </div>
+        <div id="tab3" class="tabpanel">
+          <p>Transparència, responsabilitat i compromís amb el medi ambient.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Ajuda contextual</h2>
+        <p>En aquesta secció trobaràs exemples d'ús de 
+          <span class="tooltip" tabindex="0">termes tècnics
+            <span class="tooltiptext">Paraules com "petjada ecològica" o "emissions".</span>
+          </span> 
+          per millorar la comprensió.
+        </p>
+      </section>
+
+      <section id="contacte">
+        <h2 id="titol-contacte">Formulari de contacte</h2>
+        <form>
+          <label for="nom">Nom:</label>
+          <input type="text" id="nom" name="nom" required />
+
+          <label for="email">Correu electrònic:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="missatge">Missatge:</label>
+          <textarea id="missatge" name="missatge" rows="5" required></textarea>
+
+          <button type="submit">Envia</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Greenbyte - Àlex Gertrudis, Juan Ramon Castro</p>
+    </footer>
+  </div>
+</body>
 </html>
