@@ -34,7 +34,3 @@ La pàgina ha d’incloure els següents components:
   https://www.w3.org/WAI/ARIA/apg/patterns/
 - Components accessibles de Bootstrap:  
   https://getbootstrap.com/docs/5.3/components/accordion/
-- Personalització de colors amb **SASS** a través de `npm`.
-
-## 💡 Recomanació
-
