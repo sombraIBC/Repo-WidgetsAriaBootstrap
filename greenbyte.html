@@ -7,53 +7,53 @@
 </head>
 <body>
   <div class="container">
-    <header>
+    <header aria-label="Capçalera" role="banner">
       <h1>Greenbyte</h1>
       <p>Solucions Sostenibles per un Futur Verd</p>
     </header>
 
-    <nav>
+    <nav aria-label="Navegació principal" role="navigation">
       <ul>
         <li><a href="#serveis">Serveis</a></li>
         <li><a href="#contacte">Contacte</a></li>
       </ul>
     </nav>
 
-    <main>
-      <section id="serveis">
+    <main aria-label="Contingut principal" role="main">
+      <section id="serveis" aria-label="Serveis oferts">
         <h2 id="titol-serveis">Els nostres serveis</h2>
-        <div class="accordion">
+        <div class="accordion" role="region" aria-labelledby="titol-serveis">
           <button aria-expanded="false" aria-controls="contingut1" id="titol1">Consultoria ambiental</button>
-          <div id="contingut1" class="accordion-content">
+          <div id="contingut1" class="accordion-content" role="region" aria-labelledby="titol1">
             <p>Ajudem empreses a reduir la seva petjada ecològica.</p>
           </div>
 
           <button aria-expanded="false" aria-controls="contingut2" id="titol2">Educació i tallers</button>
-          <div id="contingut2" class="accordion-content">
+          <div id="contingut2" class="accordion-content" role="region" aria-labelledby="titol2">
             <p>Oferim formacions sobre sostenibilitat per escoles i organitzacions.</p>
           </div>
         </div>
       </section>
 
-      <section class="tabs">
+      <section class="tabs" aria-label="Informació destacada">
         <h2>Informació destacada</h2>
-        <div class="tablist">
-          <button aria-selected="true" aria-controls="tab1" id="tabBtn1">Missió</button>
-          <button aria-selected="false" aria-controls="tab2" id="tabBtn2">Visió</button>
-          <button aria-selected="false" aria-controls="tab3" id="tabBtn3">Valors</button>
+        <div class="tablist" role="tablist" aria-label="Pestanyes informatives">
+          <button role="tab" aria-selected="true" aria-controls="tab1" id="tabBtn1">Missió</button>
+          <button role="tab" aria-selected="false" aria-controls="tab2" id="tabBtn2">Visió</button>
+          <button role="tab" aria-selected="false" aria-controls="tab3" id="tabBtn3">Valors</button>
         </div>
-        <div id="tab1" class="tabpanel">
+        <div id="tab1" role="tabpanel" aria-labelledby="tabBtn1" aria-hidden="false" class="tabpanel">
           <p>Contribuir a un món més net i sostenible a través de la innovació ecològica.</p>
         </div>
-        <div id="tab2" class="tabpanel">
+        <div id="tab2" role="tabpanel" aria-labelledby="tabBtn2" aria-hidden="true" class="tabpanel">
           <p>Ser líders en solucions ambientals accessibles per a tothom.</p>
         </div>
-        <div id="tab3" class="tabpanel">
+        <div id="tab3" role="tabpanel" aria-labelledby="tabBtn3" aria-hidden="true" class="tabpanel">
           <p>Transparència, responsabilitat i compromís amb el medi ambient.</p>
         </div>
       </section>
 
-      <section>
+      <section aria-label="Ajuda contextual">
         <h2>Ajuda contextual</h2>
         <p>En aquesta secció trobaràs exemples d'ús de 
           <span class="tooltip" tabindex="0">termes tècnics
@@ -63,24 +63,24 @@
         </p>
       </section>
 
-      <section id="contacte">
+      <section id="contacte" aria-label="Secció de contacte">
         <h2 id="titol-contacte">Formulari de contacte</h2>
-        <form>
+        <form aria-label="Formulari de contacte">
           <label for="nom">Nom:</label>
-          <input type="text" id="nom" name="nom" required />
+          <input type="text" id="nom" name="nom" required aria-required="true" />
 
           <label for="email">Correu electrònic:</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" id="email" name="email" required aria-required="true" />
 
           <label for="missatge">Missatge:</label>
-          <textarea id="missatge" name="missatge" rows="5" required></textarea>
+          <textarea id="missatge" name="missatge" rows="5" required aria-required="true"></textarea>
 
           <button type="submit">Envia</button>
         </form>
       </section>
     </main>
 
-    <footer>
+    <footer aria-label="Peu de pàgina" role="contentinfo">
       <p>&copy; 2025 Greenbyte - Àlex Gertrudis, Juan Ramon Castro</p>
     </footer>
   </div>
