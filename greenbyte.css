@@ -76,6 +76,70 @@
       background-color: #f9f9f9;
     }
 
+    .tabs {
+      margin: 2rem 0;
+    }
+
+    .tablist {
+      display: flex;
+      flex-wrap: wrap;
+      border-bottom: 2px solid var(--main-color);
+    }
+
+    .tablist button {
+      background: none;
+      border: none;
+      padding: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+      flex: 1 0 30%;
+      text-align: center;
+    }
+
+    .tablist button[aria-selected="true"] {
+      border-bottom: 4px solid var(--main-color);
+    }
+
+    .tabpanel {
+      display: none;
+      padding: 1rem;
+      background-color: var(--white);
+      border: 1px solid #ccc;
+    }
+
+    .tabpanel[aria-hidden="false"] {
+      display: block;
+    }
+
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: help;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 200px;
+      background-color: #333;
+      color: var(--white);
+      text-align: center;
+      border-radius: 5px;
+      padding: 0.5rem;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .tooltip:hover .tooltiptext,
+    .tooltip:focus-within .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+
     form {
       margin-top: 2rem;
     }

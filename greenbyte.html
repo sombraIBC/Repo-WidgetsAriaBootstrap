@@ -97,6 +97,18 @@
         content.style.display = expanded ? 'none' : 'block';
       });
     });
+
+    // Pestanyes
+    const tabButtons = document.querySelectorAll('[role="tab"]');
+    const tabPanels = document.querySelectorAll('[role="tabpanel"]');
+    tabButtons.forEach((btn, index) => {
+      btn.addEventListener('click', () => {
+        tabButtons.forEach(b => b.setAttribute('aria-selected', 'false'));
+        tabPanels.forEach(p => p.setAttribute('aria-hidden', 'true'));
+        btn.setAttribute('aria-selected', 'true');
+        tabPanels[index].setAttribute('aria-hidden', 'false');
+      });
+    });
   </script>
 </body>
 </html>
